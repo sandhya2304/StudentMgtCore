@@ -1,0 +1,2 @@
+# StudentMgtCore
+this project 
