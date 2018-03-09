@@ -22,7 +22,7 @@ public class Student
 	 * 
 	 */
 	
-	public Student(int id, String name, int grade, int feesPaid, int feesTotal) {
+	public Student(int id, String name, int grade, int feesPaid) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -72,12 +72,17 @@ public class Student
 	}
 	
 
-	public void updatefeesPaid(int fees)
+	public void payFees(int fees)
 	{
 		feesPaid+=fees;
+		School.updateTotalMoneySpent(feesPaid);
 		
 	}
-	
+
+	public int getRemainingFees()
+	{
+		return feesTotal-feesPaid;
+	}
 	
 	
 	
